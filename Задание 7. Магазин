@@ -1,0 +1,30 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp1
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            float goldInWallet;
+            float cristalsInWallet;
+            float priceCristal = 10;
+            
+            Console.WriteLine("Добро пожаловать в наш магазин магических кристалов.");
+            Console.WriteLine("Введите количество золотых монет, которое у Вас есть.");
+            goldInWallet = Convert.ToSingle(Console.ReadLine());
+
+            Console.WriteLine($"В нашем магазине Вы можете купить магические кристаллы по цене {priceCristal} золотых монет.");
+            Console.WriteLine("Сколько кристаллов Вы хотите купить?");
+            cristalsInWallet = Convert.ToSingle(Console.ReadLine());
+
+            goldInWallet -= priceCristal * cristalsInWallet;
+            Console.WriteLine($"Ваш баланс: {goldInWallet} золотых монет и " + $"{cristalsInWallet} кристаллов");
+            Console.ReadKey();
+        }
+    }
+}
